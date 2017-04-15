@@ -1,0 +1,8 @@
+---
+layout: post
+title:  Hello and welcome!
+introduction: >
+  I've always been really interested in forms, I thought it would be good to talk some examples of forms with other people. If that sounds like something you'd like to do then feel free to message me on <a href="https://twitter.com/talkaboutforms" class="white link hover-gold bg-black pl1 pr1">twitter</a>.
+date:   2017-04-15 13:00:07 +0100
+categories: jekyll update
+---

@@ -2,22 +2,21 @@
 layout: default
 ---
 
-<div class="home">
+  <h2 class="page-heading heading mt0 f3 b lh-title">Posts //</h2>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  {% for post in site.posts %}
+    <article class="pv4 bt bb b--black-10 ph0-l lh-copy">
+      <div class="flex flex-column flex-row-ns">
+        <div class="w-100 pr3-ns order-2 order-1-ns lh-title">
+          <a class="link black f1 heading mt0" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {{ post.introduction | markdownify }}
+        </div>
+      </div>
+      {% if post.interview == blank %}
+        <p class="f6 lh-copy gray mv0">with <span class="ttu">{{ post.interview }}</span></p>
+      {% endif %}
+      <time class="f6 db gray">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </article>
+  {% endfor %}
 
 </div>

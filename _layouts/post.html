@@ -1,14 +1,20 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+<article class="post lh-copy" itemscope itemtype="http://schema.org/BlogPosting">
+  <a href="/" class="white link hover-gold bg-black pa1">&lt; home</a>
+  <header>
+    <h1 class="f1 heading mt3 mb3 lh-title" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.interview == blank %}
+        <p class="f6 lh-copy gray mv0">with <span class="ttu">{{ page.interview }}</span></p>
+      {% endif %}
+      <time class="f5 db gray">{{ page.date | date: "%b %-d, %Y" }}</time>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div itemprop="articleBody">
+
+    {{ page.introduction | markdownify }}
+
     {{ content }}
   </div>
 

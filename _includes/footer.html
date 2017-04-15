@@ -1,38 +1,7 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
-
+<footer class="bg-near-black white-80 ph5-ns pv3 pv4-l">
+  <p class="f6"><span class="dib mr4 mr5-ns">{{ site.title }} - A series of short reviews with folks about online forms.</span>
+    <span class="link white-80">contact > </span> 
+    <a class="link white-80 hover-gold" href="{{ site.twitter_username }}"> twitter </a>
+    <!-- <a class="link white-80 hover-gold" href="mailto:{{ site.email }}">email</a> -->
+  </p>
 </footer>
