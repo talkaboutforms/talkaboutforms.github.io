@@ -13,5 +13,7 @@ baseurl: ""
 url: "https://talkaboutforms.github.io/"
 twitter_username: talkaboutforms
 
+permalink: /blog/:year/:month/:day/:title/
+
 # Build settings
 markdown: kramdown
